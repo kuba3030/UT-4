@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sesion 29</title>
+    <link rel="stylesheet" href="Estilos1.css">
+    <script>
+        function reproducirVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.play(); }
+        function pausarVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.pause(); }
+        function pararVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.currentTime = 0; elementoVideo.pause(); }
+        function reiniciarVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.currentTime = 0; elementoVideo.play(); }
+        function aumentarVolumenVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.volume += 0.1; }
+        function disminuirVolumenVideo(identificador) { elementoVideo = document.getElementById(identificador); elementoVideo.volume -= 0.1; }
+    </script>
+</head>
+
+<body>
+    <h2>Video</h2>
+    <video id="video2" width="500" height="300" autoplay="autoplay" controls loop="loop">
+        <source src="video/Mathieu van der poel.mp4" type="video/mp4">
+        <source src="video/vanderpoel2.ogg" type="video/ogg">
+        <source src="video/vanderpoel3.webm" type="video/webm">
+        Tu navegador no soporta esta etiqueta HTML5
+    </video>
+    <h2>Video con botones</h2>
+    <video id="video1" width="500" height="300" autoplay="autoplay" controls loop="loop">
+        <source src="video/Mathieu van der poel.mp4" type="video/mp4">
+        <source src="video/vanderpoel2.ogg" type="video/ogg">
+        <source src="video/vanderpoel3.webm" type="video/webm">
+        Tu navegador no soporta esta etiqueta HTML5
+    </video>
+    <div>
+        <button onclick="document.getElementById('video1').play()">Reproducir el Vídeo</button>
+        <button onclick="document.getElementById('video1').pause()">Pausar el Vídeo</button>
+        <button onclick="document.getElementById('video1').volume+=0.1">Aumentar el Volumen del Vídeo</button>
+        <button onclick="document.getElementById('video1').volume-=0.1">Disminuir el Volumen del Vídeo</button> 
+    </div>
+    <h2>Video con botones script</h2>
+    <video id="video3" width="600" height="400" autoplay="autoplay" controls loop="loop">
+        <source src="video/Mathieu van der poel.mp4" type="video/mp4">
+        <source src="video/vanderpoel2.ogg" type="video/ogg">
+        <source src="video/vanderpoel3.webm" type="video/webm">
+        Tu navegador no soporta esta etiqueta HTML5 
+    </video> 
+    <div> 
+        <button onclick="reproducirVideo('video3')">Reproducir el Vídeo</button> 
+        <button onclick="pausarVideo('video3')">Pausar el Vídeo</button>
+        <button onclick="pararVideo('video3')">Parar el Vídeo</button> 
+        <button onclick="reiniciarVideo('video3')">Reiniciar el Vídeo</button> 
+        <button onclick="aumentarVolumenVideo('video3')">Aumentar el Volumen del Vídeo</button> 
+        <button onclick="disminuirVolumenVideo('video3')">Disminuir el Volumen del Vídeo</button> 
+    </div>
+
+</body>
+
+</html>
