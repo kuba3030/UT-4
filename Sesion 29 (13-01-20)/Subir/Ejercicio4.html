@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sesion 29 - 4</title>
+    <link rel="stylesheet" href="Estilos1.css">
+</head>
+
+<body>
+    <h1>Ejemplo con geolocalización</h1>
+    <form name="formulario1" id="form1">
+        <fieldset>
+            <legend>Datos de geolocalización</legend> 
+            <label id="etiquetaLatitud" for="campoLatitud">Latitud:</label>
+            <input name="clatitud" id="campoLatitud" type="text"> 
+            <br> 
+            <label id="etiquetaLongitud" for="campoLongitud">Longitud:</label>
+            <input name="clongitud" id="campoLongitud" type="text">
+            <!--<label id="etiquetaUrl" for="campoUrl">URL:</label> <input name="cUrl" id="campoUrl" type="url">-->
+        </fieldset>
+    </form> 
+    <button onclick="obtenerLocalizacion('campoLatitud','campoLongitud')">Obtener localización actual</button>
+    <!-- <h2>Mapa con la localización actual:</h2> <img src="" id="mapa" class="mapa"> -->
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sesion 29 - 2</title>
+    <link rel="stylesheet" href="Estilos1.css">
+    <script>
+    function dibujarlinea(){
+        var canvasvar1 = document.getElementById("canvas1"); 
+        var contexto1 = canvasvar1.getContext("2d"); 
+        contexto1.moveTo(0, 0);
+        contexto1.lineTo(300, 200);/*Eje x eje y*/
+        contexto1.lineTo(600, 0);/*Eje x eje y*/
+        contexto1.stroke();
+    }
+    function dibujartexto(){
+        var canvasvar1 = document.getElementById("canvas2"); 
+        var contexto1 = canvasvar1.getContext("2d"); 
+        contexto1.font = "40px Arial"; 
+        contexto1.fillText("Hola a la clase de DIW", 20, 60);/*x, y*/
+    }
+    function dibujarcirculo(){
+        var canvasvar1 = document.getElementById("canvas3"); 
+        var contexto1 = canvasvar1.getContext("2d");
+         contexto1.beginPath();
+         contexto1.arc(300, 200, 100, 0, 2 * Math.PI);/*Eje x, eje y, radio, inicio de la circunferencia (0) y final de la circunferencia(2*PI) (2*Math.PI*R es la longitud completa de la circunferencia*/ contexto1.stroke();
+    }
+    function dibujarimagen(){
+        var canvasvar1 = document.getElementById("canvas4"); 
+        var contexto1 = canvasvar1.getContext("2d"); 
+        var imagen1 = document.getElementById("imagen1");
+         contexto1.drawImage(imagen1, 5, 5); /*eje x, eje y*/
+    }
+    </script>
+</head>
+<body>
+    <h2>Dibujar</h2>
+    <canvas id="canvas1" class="clasecanvas1" width="600" height="300">
+
+    </canvas>
+    <button onclick="dibujarlinea()">Dibujar linea</button>
+    <h2>Dibujar Texto</h2>
+    <canvas id="canvas2" class="clasecanvas1" width="600" height="300">
+
+    </canvas>
+    <button onclick="dibujartexto()">Dibujar texto</button>
+    <h2>Dibujar Circulo</h2>
+    <canvas id="canvas3" class="clasecanvas1" width="600" height="300">
+
+    </canvas>
+    <button onclick="dibujarcirculo()">Dibujar circulo</button>
+    <h2>Dibujar Imagen</h2>
+    <canvas id="canvas4" class="clasecanvas1" width="800" height="600">
+
+    </canvas>
+    <button onclick="dibujarimagen()">Dibujar Imagen</button>
+    <img id="imagen1" src="imagen/vanderpoel.jpg" alt="Van" title="Van der Poel" class="claseimagen">
+</body>
+</html>
