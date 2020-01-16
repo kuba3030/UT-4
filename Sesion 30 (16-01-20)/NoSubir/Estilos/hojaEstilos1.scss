@@ -1,0 +1,113 @@
+%contenedor{
+    grid-template-columns: auto auto auto;
+    background-color:red;
+    padding: 10px;
+    grid-column-gap: 30px; /*espacio entre columnas*/
+    grid-row-gap: 40px;/*espacio entre filas*/
+}
+%hijo{
+    background-color: gold;
+    border: 1px solid black;
+    padding:20px;
+    font-size:30px;
+    text-align: center;
+}
+.contenedorgrid{
+    display:grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+    &_elementohijo{
+       @extend %hijo;
+    }
+    &_elementohijo2{
+        @extend %hijo;
+        grid-row-start: 1;
+        grid-row-end:3 ;
+        grid-column-start: 2;
+        grid-column-end:3 ;
+    }
+    &_elementohijo7{
+        @extend %hijo;
+        grid-column-start: 2;
+        grid-column-end:3 ;
+    }
+}
+.contenedorgridlinea{
+    display:inline-grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+     &_elementohijo{
+        @extend %hijo;
+    }
+}
+
+.contenedorgridcolumns{
+    display:grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+    /* grid-template-columns: 20% 20% 20% 20% 20%; */
+    grid-template-columns: repeat(5,20%);
+    box-sizing: border-box; /*borde dentro del ancho del contenedor*/
+    gap:0; /* propiedad resumen de colum-gap y row-gap al poner 0 se lo establecemos a los dos parametros*/
+    &_elementohijo{
+       @extend %hijo;
+    }
+}
+.contenedorgridrows{
+    display:grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+    /* grid-template-columns: 20% 20% 20% 20% 20%; */
+    grid-template-columns: repeat(5,20%);
+    box-sizing: border-box; /*borde dentro del ancho del contenedor*/
+    gap:0; /* propiedad resumen de colum-gap y row-gap al poner 0 se lo establecemos a los dos parametros*/
+    grid-template-rows:200px 300px 200px ;
+    &_elementohijo{
+       @extend %hijo;
+    }
+}
+
+
+@mixin justifycontent($valor) {
+    
+    justify-content: $valor;
+
+}
+
+.contenedorgridjustifycontent{
+    display:grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+    @include justifycontent(end);
+    &_elementohijo{
+       @extend %hijo;
+    }
+}
+.contenedorgridjustifycontentcenter{
+    display:grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+    @include justifycontent(center);
+    &_elementohijo{
+       @extend %hijo;
+    }
+}
+.contenedorgridjustifycontentspacearound{
+    display: grid;
+    @extend %contenedor;
+    @include justifycontent(spacearound);
+    &_elementohijo{
+       @extend %hijo;
+    }
+}
+
+@mixin aligncontent($valor) {
+    
+    align-content: $valor;
+
+}
+.contenedorgridaligncontent{
+    display:grid; /*Se muestra como bloque*/
+    @extend %contenedor;
+    @include justifycontent(center);
+    @include aligncontent(center);
+    margin-top: 30px;
+    min-height: 600px;
+    &_elementohijo{
+       @extend %hijo;
+    }
+}

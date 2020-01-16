@@ -1,0 +1,82 @@
+.contenedorgridaligncontent, .contenedorgridjustifycontentspacearound, .contenedorgridjustifycontentcenter, .contenedorgridjustifycontent, .contenedorgridrows, .contenedorgridcolumns, .contenedorgridlinea, .contenedorgrid {
+  grid-template-columns: auto auto auto;
+  background-color: red;
+  padding: 10px;
+  grid-column-gap: 30px;
+  /*espacio entre columnas*/
+  grid-row-gap: 40px;
+  /*espacio entre filas*/
+}
+
+.contenedorgridaligncontent_elementohijo, .contenedorgridjustifycontentspacearound_elementohijo, .contenedorgridjustifycontentcenter_elementohijo, .contenedorgridjustifycontent_elementohijo, .contenedorgridrows_elementohijo, .contenedorgridcolumns_elementohijo, .contenedorgridlinea_elementohijo, .contenedorgrid_elementohijo7, .contenedorgrid_elementohijo2, .contenedorgrid_elementohijo {
+  background-color: gold;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contenedorgrid {
+  display: grid;
+  /*Se muestra como bloque*/
+}
+.contenedorgrid_elementohijo2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.contenedorgrid_elementohijo7 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.contenedorgridlinea {
+  display: inline-grid;
+  /*Se muestra como bloque*/
+}
+.contenedorgridcolumns {
+  display: grid;
+  /*Se muestra como bloque*/
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  grid-template-columns: repeat(5, 20%);
+  box-sizing: border-box;
+  /*borde dentro del ancho del contenedor*/
+  gap: 0;
+  /* propiedad resumen de colum-gap y row-gap al poner 0 se lo establecemos a los dos parametros*/
+}
+.contenedorgridrows {
+  display: grid;
+  /*Se muestra como bloque*/
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  grid-template-columns: repeat(5, 20%);
+  box-sizing: border-box;
+  /*borde dentro del ancho del contenedor*/
+  gap: 0;
+  /* propiedad resumen de colum-gap y row-gap al poner 0 se lo establecemos a los dos parametros*/
+  grid-template-rows: 200px 300px 200px;
+}
+.contenedorgridjustifycontent {
+  display: grid;
+  /*Se muestra como bloque*/
+  justify-content: end;
+}
+.contenedorgridjustifycontentcenter {
+  display: grid;
+  /*Se muestra como bloque*/
+  justify-content: center;
+}
+.contenedorgridjustifycontentspacearound {
+  display: grid;
+  justify-content: spacearound;
+}
+.contenedorgridaligncontent {
+  display: grid;
+  /*Se muestra como bloque*/
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+  min-height: 600px;
+}
+
+/*# sourceMappingURL=hojaEstilos1.css.map */
