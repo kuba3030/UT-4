@@ -1,0 +1,52 @@
+%centradopordefecto{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.contenedorgrid{
+    display: grid;
+   /* grid-template-columns: auto auto auto auto;*/
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(4,auto);
+    background-color: lightgreen;
+    gap: 10px;
+    padding: 10px;
+    &_elementohijo{
+        background-color: orange;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 30px;
+        @extend %centradopordefecto;
+    }
+    &_elemento1{
+        grid-area: 1 / 1 / 3 / 4;
+        
+        
+    }
+    &_elemento4{
+        grid-area: 3 / 1 / 5 / 2;
+       
+    }
+    &_elemento6{
+        grid-area: 3 / 3 / 5 / 5;
+    }
+    &_elem1{
+        grid-area: 1 / 3 / 2 /5;
+    }
+    &_elem2{
+        grid-area: 2 / 3 / 3 / 5;
+    }
+    &_elem3{
+        grid-area: 1 / 1 / 2 / 2
+    }
+    &_elem4{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    &_elem5{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    &_elem6{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
